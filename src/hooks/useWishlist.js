@@ -9,49 +9,32 @@ export const useWishlist = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-const loadWishlist = async () => {
+  const loadWishlist = async () => {
     try {
       setLoading(true);
       setError(null);
       const wishlistData = await wishlistService.getAll();
       setWishlist(wishlistData);
       
-      // Initialize empty array first to prevent undefined state
-      setWishlistItems([]);
-      
-      if (wishlistData.length === 0) {
-        setWishlistItems([]);
-        return;
-      }
-      
       // Enrich wishlist items with product details
       const enrichedItems = await Promise.all(
         wishlistData.map(async (item) => {
           try {
             const product = await productService.getById(item.productId);
-            if (product) {
-              return {
-                ...item,
-                product
-              };
-            } else {
-              console.warn(`Product ${item.productId} not found, skipping`);
-              return null;
-            }
+            return {
+              ...item,
+              product
+            };
           } catch (err) {
             console.error(`Error loading product ${item.productId}:`, err);
-            return null;
+            return item;
           }
         })
       );
       
-      // Filter out null items (failed product loads) and update state
-      const validItems = enrichedItems.filter(item => item !== null);
-      setWishlistItems(validItems);
-      
+      setWishlistItems(enrichedItems);
     } catch (err) {
       setError(err.message);
-      setWishlistItems([]);
       console.error('Error loading wishlist:', err);
     } finally {
       setLoading(false);
