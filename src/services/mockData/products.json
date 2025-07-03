@@ -1,0 +1,183 @@
+[
+  {
+    "Id": 1,
+    "name": "Silk Midnight Dress",
+    "price": 299,
+    "images": [
+      "https://images.unsplash.com/photo-1566479179817-9040ecdad726?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1566479179817-9040ecdad726?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1566479179817-9040ecdad726?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Black", "Navy", "Burgundy"],
+    "category": "women",
+    "description": "Elegant silk dress perfect for evening occasions. Features a flowing silhouette and luxurious fabric that drapes beautifully.",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "Id": 2,
+    "name": "Classic Wool Coat",
+    "price": 459,
+    "images": [
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["Camel", "Black", "Grey"],
+    "category": "women",
+    "description": "Timeless wool coat with sophisticated tailoring. Perfect for transitional weather and professional settings.",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "Id": 3,
+    "name": "Cashmere Turtleneck",
+    "price": 189,
+    "images": [
+      "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Cream", "Black", "Grey", "Camel"],
+    "category": "women",
+    "description": "Luxurious 100% cashmere turtleneck sweater. Soft, warm, and endlessly versatile for layering.",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "Id": 4,
+    "name": "Tailored Blazer",
+    "price": 349,
+    "images": [
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Black", "Navy", "Charcoal"],
+    "category": "women",
+    "description": "Perfectly tailored blazer for the modern professional. Sharp lines and impeccable fit.",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "Id": 5,
+    "name": "Leather Ankle Boots",
+    "price": 275,
+    "images": [
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
+    "colors": ["Black", "Brown", "Tan"],
+    "category": "accessories",
+    "description": "Premium leather ankle boots with comfortable heel. Perfect for everyday wear and special occasions.",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "Id": 6,
+    "name": "Slim Fit Jeans",
+    "price": 129,
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["28", "29", "30", "31", "32", "33", "34", "36"],
+    "colors": ["Dark Blue", "Black", "Light Blue"],
+    "category": "men",
+    "description": "Premium denim with perfect fit and lasting quality. Versatile styling for casual and smart-casual looks.",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "Id": 7,
+    "name": "Cotton Oxford Shirt",
+    "price": 89,
+    "images": [
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": ["White", "Light Blue", "Pink"],
+    "category": "men",
+    "description": "Classic cotton oxford shirt with button-down collar. Essential wardrobe staple for the modern gentleman.",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "Id": 8,
+    "name": "Merino Wool Sweater",
+    "price": 159,
+    "images": [
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": ["Navy", "Grey", "Burgundy", "Forest Green"],
+    "category": "men",
+    "description": "Luxurious merino wool sweater with classic crew neck. Temperature regulating and incredibly soft.",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "Id": 9,
+    "name": "Leather Crossbody Bag",
+    "price": 195,
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["One Size"],
+    "colors": ["Black", "Tan", "Burgundy"],
+    "category": "accessories",
+    "description": "Elegant leather crossbody bag with adjustable strap. Perfect size for essentials with sophisticated style.",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "Id": 10,
+    "name": "Designer Sunglasses",
+    "price": 225,
+    "images": [
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["One Size"],
+    "colors": ["Black", "Tortoise", "Gold"],
+    "category": "accessories",
+    "description": "Premium designer sunglasses with UV protection. Timeless style meets modern functionality.",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "Id": 11,
+    "name": "Satin Blouse",
+    "price": 145,
+    "images": [
+      "https://images.unsplash.com/photo-1564557287817-3785e38ec1f5?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1564557287817-3785e38ec1f5?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Ivory", "Blush", "Black"],
+    "category": "women",
+    "description": "Luxurious satin blouse with elegant draping. Perfect for both professional and evening wear.",
+    "inStock": false,
+    "featured": false
+  },
+  {
+    "Id": 12,
+    "name": "Leather Dress Shoes",
+    "price": 325,
+    "images": [
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=600&fit=crop"
+    ],
+    "sizes": ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "12"],
+    "colors": ["Black", "Brown"],
+    "category": "men",
+    "description": "Handcrafted leather dress shoes with traditional construction. Perfect for formal occasions and business wear.",
+    "inStock": true,
+    "featured": true
+  }
+]
