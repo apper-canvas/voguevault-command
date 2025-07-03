@@ -3,10 +3,10 @@
     "Id": 1,
     "name": "Silk Midnight Dress",
     "price": 299,
-    "images": [
-      "https://images.unsplash.com/photo-1566479179817-9040ecdad726?w=400&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1566479179817-9040ecdad726?w=400&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1566479179817-9040ecdad726?w=400&h=600&fit=crop"
+"images": [
+      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=600&fit=crop"
     ],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "colors": ["Black", "Navy", "Burgundy"],
