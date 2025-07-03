@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { cartService } from '@/services/api/cartService';
 import { productService } from '@/services/api/productService';
 import { toast } from 'react-toastify';
-
 export const useCart = () => {
   const [cart, setCart] = useState([]);
   const [cartItems, setCartItems] = useState([]);

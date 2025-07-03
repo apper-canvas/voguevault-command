@@ -1,13 +1,31 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import Button from '@/components/atoms/Button';
-import { useCart } from '@/hooks/useCart';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useCart } from "@/hooks/useCart";
+import ApperIcon from "@/components/ApperIcon";
+import Button from "@/components/atoms/Button";
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
+  const [isWishlisted, setIsWishlisted] = useState(false);
+  
+  const handleWishlistToggle = async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    try {
+      setIsWishlisted(!isWishlisted);
+      // TODO: Implement wishlist API call when backend is ready
+      console.log(`Product ${product.Id} ${!isWishlisted ? 'added to' : 'removed from'} wishlist`);
+    } catch (error) {
+      console.error('Error toggling wishlist:', error);
+      // Revert state on error
+      setIsWishlisted(isWishlisted);
+    }
+  };
+  
   const handleQuickAdd = async (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -72,9 +90,23 @@ const handleImageError = () => {
                 <span className="text-white font-medium px-3 py-1 bg-black rounded">
                   Out of Stock
                 </span>
-              </div>
+</div>
             )}
             
+            {/* Wishlist Heart Icon */}
+            <button
+              onClick={handleWishlistToggle}
+              className="absolute top-3 right-3 p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-md hover:bg-white transition-all duration-200 hover:scale-110"
+            >
+              <ApperIcon 
+                name="Heart" 
+                size={16} 
+                className={`transition-colors duration-200 ${
+                  isWishlisted ? 'text-red-500 fill-red-500' : 'text-gray-600 hover:text-red-500'
+                }`}
+              />
+            </button>
+
             {/* Quick Add Button */}
             {product.inStock && (
               <div className="absolute inset-x-4 bottom-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

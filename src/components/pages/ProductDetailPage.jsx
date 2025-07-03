@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import ApperIcon from '@/components/ApperIcon';
-import Button from '@/components/atoms/Button';
-import Loading from '@/components/ui/Loading';
-import Error from '@/components/ui/Error';
-import { productService } from '@/services/api/productService';
-import { useCart } from '@/hooks/useCart';
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { useCart } from "@/hooks/useCart";
+import ApperIcon from "@/components/ApperIcon";
+import Button from "@/components/atoms/Button";
+import Error from "@/components/ui/Error";
+import Loading from "@/components/ui/Loading";
+import { productService } from "@/services/api/productService";
 
 const ProductDetailPage = () => {
   const { id } = useParams();
@@ -15,9 +15,10 @@ const ProductDetailPage = () => {
   const [error, setError] = useState(null);
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedSize, setSelectedSize] = useState('');
-  const [selectedColor, setSelectedColor] = useState('');
+const [selectedColor, setSelectedColor] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [addingToCart, setAddingToCart] = useState(false);
+  const [isWishlisted, setIsWishlisted] = useState(false);
 
   const { addToCart } = useCart();
 
@@ -58,6 +59,10 @@ const ProductDetailPage = () => {
     } finally {
       setAddingToCart(false);
     }
+};
+
+  const handleWishlistToggle = () => {
+    setIsWishlisted(!isWishlisted);
   };
 
   const formatPrice = (price) => {
@@ -243,19 +248,35 @@ const ProductDetailPage = () => {
             </div>
           </div>
 
-          {/* Add to Cart Button */}
+{/* Action Buttons */}
           <div className="space-y-4">
-            <Button
-              variant="primary"
-              size="large"
-              onClick={handleAddToCart}
-              disabled={!product.inStock}
-              loading={addingToCart}
-              icon="ShoppingBag"
-              className="w-full"
-            >
-              {!product.inStock ? 'Out of Stock' : 'Add to Cart'}
-            </Button>
+            <div className="flex space-x-4">
+              <Button
+                variant="primary"
+                size="large"
+                onClick={handleAddToCart}
+                disabled={!product.inStock}
+                loading={addingToCart}
+                icon="ShoppingBag"
+                className="flex-1"
+              >
+                {!product.inStock ? 'Out of Stock' : 'Add to Cart'}
+              </Button>
+              
+              <Button
+                variant={isWishlisted ? "secondary" : "outline"}
+                size="large"
+                onClick={handleWishlistToggle}
+                icon="Heart"
+                className={`px-6 ${
+                  isWishlisted 
+                    ? 'text-red-600 border-red-200 bg-red-50 hover:bg-red-100' 
+                    : 'hover:text-red-600 hover:border-red-200'
+                }`}
+              >
+                {isWishlisted ? 'Saved' : 'Save'}
+              </Button>
+            </div>
 
             {product.inStock && (
               <div className="flex items-center space-x-2 text-sm text-gray-600">

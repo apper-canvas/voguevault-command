@@ -15,10 +15,11 @@ const Header = () => {
 
   const cartItemCount = getCartItemCount();
 
-  const navigation = [
+const navigation = [
     { name: 'Women', href: '/category/women' },
     { name: 'Men', href: '/category/men' },
     { name: 'Accessories', href: '/category/accessories' },
+    { name: 'Wishlist', href: '/wishlist' },
     { name: 'New Arrivals', href: '/search?featured=true' },
     { name: 'Sale', href: '/search?sale=true' }
   ];
