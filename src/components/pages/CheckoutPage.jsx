@@ -102,7 +102,7 @@ const CheckoutPage = () => {
     }
   };
 
-  const handlePaymentSubmit = async (e) => {
+const handlePaymentSubmit = async (e) => {
     e.preventDefault();
     if (!validatePayment()) return;
 
@@ -123,7 +123,7 @@ const CheckoutPage = () => {
           cardNumber: '**** **** **** ' + paymentInfo.cardNumber.slice(-4)
         },
         subtotal: total,
-        shipping: shipping,
+        shippingCost: shipping,
         tax: tax,
         total: finalTotal
       };
