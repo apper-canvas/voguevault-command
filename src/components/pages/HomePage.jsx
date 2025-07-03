@@ -223,7 +223,7 @@ const HomePage = () => {
                 className="text-center group"
               >
                 <div className="bg-white/10 rounded-full p-4 w-16 h-16 mx-auto mb-4 group-hover:bg-accent transition-colors duration-300">
-                  <ApperIcon name={feature.icon} size={32} className="mx-auto" />
+                  <ApperIcon name={feature.icon} size={32} className="mx-auto"><ApperIcon name={feature.icon} size={32} className="mx-auto" /></ApperIcon>
                 </div>
                 <h3 className="font-semibold text-xl mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
